@@ -1,3 +1,8 @@
+/*
+{
+   author : hem_patel_02
+}
+*/
 #define mod 1000000007
 #define ull unsigned long long
 #define ll long long
@@ -20,10 +25,10 @@ void solve()
         cin>>v[i];
         number_idx[v[i]]=i;
     }
-    ll curr=-1;
+    ll curr=1e9;
     ll count=0;
     for(ll i=1;i<=n;i++){
-        if(curr<number_idx[i]){
+        if(curr>number_idx[i]){
             count++;
         }
         curr=number_idx[i];
@@ -35,8 +40,6 @@ int32_t main()
 ios::sync_with_stdio(0);
 cin.tie(0);
 cout.tie(0);
-// int t=1;
-// cin>>t;
 solve();
   return 0;
 }
